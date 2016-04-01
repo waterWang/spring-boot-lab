@@ -1,19 +1,26 @@
 # Spring-Boot-Lab
 
-## 项目官网：<http://waterwang.github.io/cas-server-lab/>
-## 项目wiki：<https://github.com/waterWang/cas-server-lab/wiki>  
+## 项目官网：<http://waterwang.github.io/spring-boot-lab/>
+## 项目wiki：<https://github.com/waterWang/spring-boot-lab/wiki>  
 
 ## 简介
-欢迎访问CAS Server Lab，旨在解决集成SSO中常用的场景分析及技术解决方案，如有问题欢迎大家随时提交issue。
+欢迎访问spring-boot-lab，旨在学习常用的场景分析及技术解决方案，如有问题欢迎大家随时提交issue。
+
+ （1）集中式配置+注解，大大简化了开发流程；   
+ （2）内嵌的Tomcat和Jetty容器，无需繁琐的Web配置；  
+ （3）提供了Spring各个插件的基于Maven的pom模板配置，开箱即用；   
+ （4）可以在任何你想自动化配置的地方，实现可能 ；  
+ （5）提供更多的企业级开发特性，如何系统监控，健康诊断，权限控制；   
+ （6）无冗余代码生成和XML强制配置；  
+ （7）提供支持强大的Restfult风格的编码；
 
 ## 环境
-	tomcat8 + jdk 8
-	base on Cas 4.0.0
-	
+	 jdk 8
+	base on Spring-Boot 1.2.6
 
 ### 当前版本 v0.0.0.1
 
-- [x] [REST API方式注册用户](https://github.com/waterWang/cas-server-lab/tree/release-v0.0.0.5)   
+- [x] [初始化](d)   
 
 
 ## 意见反馈
@@ -23,6 +30,4 @@
 
 
 ## 参考文献
-1.  CAS 官网：<http://www.jasig.org/cas>
-2.  CAS Document API：<http://jasig.github.io/cas/4.0.x/index.html>
-3.  集成REST：<http://jasig.github.io/cas/4.0.x/protocol/REST-Protocol.html>
+1.  spring boot 官网：<http://projects.spring.io/spring-boot/>
