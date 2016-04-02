@@ -12,7 +12,7 @@
  （4）可以在任何你想自动化配置的地方，实现可能 ；  
  （5）提供更多的企业级开发特性，如何系统监控，健康诊断，权限控制；   
  （6）无冗余代码生成和XML强制配置；  
- （7）提供支持强大的Restfult风格的编码；
+ （7）提供支持强大的Restfult风格编码；
 
 ## 环境
 	 jdk 8
@@ -31,3 +31,4 @@
 
 ## 参考文献
 1.  spring boot 官网：<http://projects.spring.io/spring-boot/>
+2.  spring boot 源码：<https://github.com/spring-projects/spring-boot>
