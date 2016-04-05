@@ -3,7 +3,7 @@
 ## 项目官网：<http://waterwang.github.io/spring-boot-lab/>
 ## 项目wiki：<https://github.com/waterWang/spring-boot-lab/wiki>  
 
-## 简介
+## 项目简介
 欢迎访问spring-boot-lab，旨在学习spring boot常用的场景分析及技术解决方案，如有问题欢迎大家随时提交issue。
 
  （1）集中式配置+注解，大大简化了开发流程；   
