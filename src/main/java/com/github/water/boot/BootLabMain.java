@@ -12,17 +12,16 @@ import org.springframework.core.env.Environment;
 /**
  * water
  * 
- * Spring中的配置类需要以@Configuration注解修饰，
- * 这里的@SpringBootApplication能被正常加载，
+ * Spring中的配置类需要以@Configuration注解修饰， 这里的@SpringBootApplication能被正常加载，
  * 是由于其整合了@Configuration、@EnableAutoConfiguration、@ComponentScan三个注解。
  */
 @SpringBootApplication
-public class ApplicationMain {
+public class BootLabMain {
 
-	private static final Logger log = LoggerFactory.getLogger(ApplicationMain.class);
+	private static final Logger log = LoggerFactory.getLogger(BootLabMain.class);
 
 	public static void main(String[] args) throws UnknownHostException {
-		SpringApplication app = new SpringApplication(ApplicationMain.class);
+		SpringApplication app = new SpringApplication(BootLabMain.class);
 
 		// SimpleCommandLinePropertySource source = new
 		// SimpleCommandLinePropertySource(args);
@@ -34,10 +33,11 @@ public class ApplicationMain {
 		Environment env = app.run(args).getEnvironment();
 		log.info(
 				"Access URLs:\n----------------------------------------------------------\n\t"
-						+ "Local: \t\thttp://127.0.0.1:{}\n\t"
-						+ "External: \thttp://{}:{}\n----------------------------------------------------------",
-				env.getProperty("server.port"), InetAddress.getLocalHost().getHostAddress(),
-				env.getProperty("server.port"));
+						+ "Local: \t\thttp://127.0.0.1:{}{}\n\t"
+						+ "External: \thttp://{}:{}{}\n----------------------------------------------------------",
+				env.getProperty("server.port"), env.getProperty("server.contextPath"),
+				InetAddress.getLocalHost().getHostAddress(), env.getProperty("server.port"),
+				env.getProperty("server.contextPath"));
 
 	}
 
