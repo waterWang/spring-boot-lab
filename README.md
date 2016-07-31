@@ -13,6 +13,20 @@
  （5）提供更多的企业级开发特性，如何系统监控，健康诊断，权限控制；   
  （6）无冗余代码生成和XML强制配置；  
  （7）提供支持强大的Restfult风格编码；
+ 
+ 
+## 运行
+
+mvn方式： mvn spring-boot:run
+application方式：  运行main
+
+## 包说明
+
+root package结构：com.example.myproject
+应用主类Application.java置于root package下，通常我们会在应用主类中做一些框架配置扫描等配置，我们放在root package下可以帮助程序减少手工配置来加载到我们希望被Spring加载的内容
+实体（Entity）与数据访问层（Repository）置于com.example.myproject.domain包下
+逻辑层（Service）置于com.example.myproject.service包下
+Web层（web）置于com.example.myproject.controller包下
 
 ## 环境
 	 jdk 8
