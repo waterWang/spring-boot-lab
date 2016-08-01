@@ -8,4 +8,12 @@ public class TestCommon {
 		System.out.println(str);
 
 	}
+	
+	private String name;
+
+	public TestCommon(String name) {
+		super();
+		this.name = name;
+	}
+	
 }
