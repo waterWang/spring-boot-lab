@@ -1,8 +1,7 @@
 //package com.github.water.boot.conf;
 //
-//import com.codahale.metrics.MetricRegistry;
-//import com.dinglicom.dledu.constant.Constants;
-//import com.fasterxml.jackson.datatype.hibernate4.Hibernate4Module;
+////import com.codahale.metrics.MetricRegistry;
+////import com.fasterxml.jackson.datatype.hibernate4.Hibernate4Module;
 //import com.zaxxer.hikari.HikariConfig;
 //import com.zaxxer.hikari.HikariDataSource;
 //
@@ -10,7 +9,6 @@
 //
 //import org.slf4j.Logger;
 //import org.slf4j.LoggerFactory;
-//import org.springframework.beans.factory.annotation.Autowired;
 //import org.springframework.boot.autoconfigure.condition.ConditionalOnMissingClass;
 //import org.springframework.boot.bind.RelaxedPropertyResolver;
 //import org.springframework.context.ApplicationContextException;
@@ -41,8 +39,8 @@
 //
 //    private Environment env;
 //
-//    @Autowired(required = false)
-//    private MetricRegistry metricRegistry;
+////    @Autowired(required = false)
+////    private MetricRegistry metricRegistry;
 //
 //    @Override
 //    public void setEnvironment(Environment env) {
@@ -80,9 +78,9 @@
 //            config.addDataSourceProperty("prepStmtCacheSqlLimit", propertyResolver.getProperty("prepStmtCacheSqlLimit", "2048"));
 //            config.addDataSourceProperty("useServerPrepStmts", propertyResolver.getProperty("useServerPrepStmts", "true"));
 //        }
-//        if (metricRegistry != null) {
-//            config.setMetricRegistry(metricRegistry);
-//        }
+////        if (metricRegistry != null) {
+////            config.setMetricRegistry(metricRegistry);
+////        }
 //        return new HikariDataSource(config);
 //    }
 //
@@ -106,13 +104,13 @@
 //        return liquibase;
 //    }
 //
-//    @Bean
-//    public Hibernate4Module hibernate4Module() {
-//        return new Hibernate4Module();
-//    }
-//
-//    @Bean(name = "jdbcTemplate")
-//    public JdbcTemplate jdbcTemplate(DataSource dataSource) {
-//        return new JdbcTemplate(dataSource);
-//    }
+////    @Bean
+////    public Hibernate4Module hibernate4Module() {
+////        return new Hibernate4Module();
+////    }
+////
+////    @Bean(name = "jdbcTemplate")
+////    public JdbcTemplate jdbcTemplate(DataSource dataSource) {
+////        return new JdbcTemplate(dataSource);
+////    }
 //}
