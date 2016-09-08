@@ -9,10 +9,10 @@ import liquibase.integration.spring.SpringLiquibase;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnMissingClass;
 import org.springframework.boot.bind.RelaxedPropertyResolver;
 import org.springframework.context.ApplicationContextException;
-import org.springframework.context.EnvironmentAware;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Profile;
@@ -31,25 +31,31 @@ import java.util.Arrays;
 //@EnableJpaRepositories("com.dinglicom.dledu.repository")
 //@EnableJpaAuditing(auditorAwareRef = "springSecurityAuditorAware")
 //@EnableTransactionManagement
-public class DatabaseConfiguration implements EnvironmentAware {
+public class DatabaseConfiguration  {
 
     private final Logger log = LoggerFactory.getLogger(DatabaseConfiguration.class);
 
     private RelaxedPropertyResolver propertyResolver;
 
     private Environment env;
+    
+    @Value("${spring.datasource.dataSourceClassName}")
+    private String dataSourceClassName;
 
+    @Value("${spring.datasource.url}")
+    private String url;
+    
 //    @Autowired(required = false)
 //    private MetricRegistry metricRegistry;
 
-    @Override
-    public void setEnvironment(Environment env) {
-        this.env = env;
-        this.propertyResolver = new RelaxedPropertyResolver(env, "spring.datasource.");
-    }
+//    @Override
+//    public void setEnvironment(Environment env) {
+//        this.env = env;
+//        this.propertyResolver = new RelaxedPropertyResolver(env, "spring.datasource.");
+//    }
 
     @Bean(destroyMethod = "shutdown")
-    @ConditionalOnMissingClass(name = "com.dinglicom.dledu.config.HerokuDatabaseConfiguration")
+    @ConditionalOnMissingClass(value = "com.dinglicom.dledu.config.HerokuDatabaseConfiguration")
     @Profile("!" + Constants.SPRING_PROFILE_CLOUD)
     public DataSource dataSource() {
         log.debug("Configuring Datasource");
